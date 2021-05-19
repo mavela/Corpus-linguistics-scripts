@@ -33,7 +33,7 @@ def read_conll(inp,max_sent=0,drop_tokens=True,drop_nulls=True):
 
 remove_spec_characters=re.compile("[^a-zäöå0-9 -]")
 for sentence,comments in read_conll(sys.stdin):
-    words=[columns[1] for columns in sentence]
+    words=[columns[2] for columns in sentence]
     sentence_text=" ".join(words)
     #now you can do as you please with the sentence text
     #this will lowercase and remove characters not recognized by us
